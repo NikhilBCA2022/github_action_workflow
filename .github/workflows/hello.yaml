@@ -5,6 +5,7 @@ on:
         branches:
           - master
           - production
+          
 
 jobs:
     hello_world: 
@@ -15,3 +16,6 @@ jobs:
 
           - name: todays date
             run: date
+
+          - name:  current working dir
+            run:  pwd
