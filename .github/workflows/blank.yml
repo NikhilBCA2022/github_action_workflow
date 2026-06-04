@@ -7,4 +7,4 @@ jobs:
       - name: Build step
         run: |
          echo "this is line one"
-         ls
+         pwd
