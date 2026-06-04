@@ -2,9 +2,9 @@ name: Hello world
 on: workflow_dispatch #only manually
 jobs:
   hello:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest ##virtual machine to run all the jobs
     steps:
-      - name: hello step
+      - name: Build step
         run: |
          echo "this is line one"
-         echo "this is line two"
+         ls
