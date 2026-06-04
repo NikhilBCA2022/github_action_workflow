@@ -1,10 +1,20 @@
 name: Hello world
 on: workflow_dispatch #only manually
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest ##virtual machine to run all the jobs
     steps:
       - name: Build step
-        run: |
-         echo "this is line one"
-         pwd
+        run: echo "Build Step"
+      
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "this is test"
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "this is deploy"
