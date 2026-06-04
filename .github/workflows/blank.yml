@@ -1,0 +1,8 @@
+name: Hello world
+on: workflow_dispatch #only manually
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello step
+        run: echo "hello nikhil"
