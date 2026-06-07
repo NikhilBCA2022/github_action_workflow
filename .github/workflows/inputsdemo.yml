@@ -27,3 +27,5 @@ jobs:
         run: |
           echo "Deploying application to ${{ inputs.environment }}"
           echo "Artifact Tag: ${{ inputs['artifact-tag'] }}"
+          echo "this is triggered by ${{ github.actor }}"
+          echo "the repo name is ${{ github.repository }}"
