@@ -1,5 +1,13 @@
 name: Hello world
-on: workflow_dispatch #only manually
+on: #["push","pull_request"]
+ push:
+  branches:
+    - main
+    - master
+    - release/**
+ pull_request:
+  branches:
+    - m
 jobs:
   build:
     runs-on: ubuntu-latest ##virtual machine to run all the jobs
