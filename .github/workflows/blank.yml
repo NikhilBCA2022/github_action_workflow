@@ -14,7 +14,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Code static code to s3
+        run: aws s3 sync ./ s3://git-hub-action-demo-static/ --exclude "*" --include "index.html"
+
+      - name: Verify files
         run: |
-          aws s3 sync ./ s3://git-hub-action-demo-static/ \ 
-          --exclude "*" \
-          --include "index.html"
+          pwd
+          ls -la
