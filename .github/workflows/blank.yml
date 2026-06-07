@@ -7,7 +7,8 @@ on: #["push","pull_request"]
     - release/**
  pull_request:
   branches:
-    - m
+    - main
+    - features/prdemo
 jobs:
   build:
     runs-on: ubuntu-latest ##virtual machine to run all the jobs
