@@ -29,3 +29,6 @@ jobs:
           echo "Artifact Tag: ${{ inputs['artifact-tag'] }}"
           echo "this is triggered by ${{ github.actor }}"
           echo "the repo name is ${{ github.repository }}"
+          
+      - name: print all variables under github
+        run: echo "${{ toJson(github)}}"
