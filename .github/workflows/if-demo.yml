@@ -1,0 +1,19 @@
+name: if-demo
+on:
+    push:
+        branches:
+          - main
+          - master
+    pull_request:
+         types:
+           - opened
+           - synchronize
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'main'
+    steps:
+      - name: id-demo
+        run: echo "this is build job"
+  
+      
